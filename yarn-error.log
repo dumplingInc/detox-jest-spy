@@ -1,0 +1,80 @@
+Arguments: 
+  /usr/local/Cellar/node/15.11.0/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js
+
+PATH: 
+  /Users/matt/.zplug/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/matt/.cargo/bin:/Users/matt/Library/Android/sdk/emulator:/Users/matt/Library/Android/sdk/tools:/Users/matt/Library/Android/sdk/tools/bin:/Users/matt/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.11.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/matt/projects/react-native/detox-jest-spy/package.json: Unexpected token } in JSON at position 1120
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "detox-jest-spy",
+    "version": "1.0.1",
+    "description": "",
+    "main": "dist/server.js",
+    "types": "dist/server.d.ts",
+    "scripts": {
+      "test": "jest",
+      "start": "tsc -w",
+      "build": "tsc"
+    },
+    "keywords": [
+      "jest",
+      "detox",
+      "spy",
+      "mock",
+      "test"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/8fit/detox-jest-spy.git"
+    },
+    "author": "Pedro Solá <p3dro.sola@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "7.1.2",
+      "@babel/preset-env": "^7.1.0",
+      "@babel/preset-typescript": "^7.13.0",
+      "@babel/runtime": "7.1.2",
+      "@types/body-parser": "^1.17.0",
+      "@types/connect": "^3.4.32",
+      "@types/jest": "^24.0.0",
+      "@types/node-fetch": "^2.1.4",
+      "babel-jest": "^24.0.0",
+      "jest": "^24.0.0",
+      "jest-junit": "^6.2.1",
+      "node-fetch": "^2.3.0",
+      "ts-jest": "^23.10.5",
+      "typescript": "^3.2.4",
+      "@types/react-native": "^0.63.52"
+    },
+    "peerDependencies": {
+      "react-native": "^0.63"
+    },
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "connect": "^3.6.6",
+      "http": "^0.0.0"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
