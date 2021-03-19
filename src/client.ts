@@ -4,8 +4,8 @@ interface Options {
 }
 const DEFAULT_OPTIONS: Options = {
   server: Platform.select({
-    ios: "http://localhost:62556", // iOS simulator uses same network
-    android: "http://10.0.2.2:62556", // Android emulator loopback address
+    ios: "localhost:62556", // iOS simulator uses same network
+    android: "10.0.2.2:62556", // Android emulator loopback address
   }),
 };
 // state
@@ -22,7 +22,7 @@ export function configure(configOptions: Options = {}) {
  * @param args
  */
 export function track(name: string, args: any[] = []) {
-  return fetch(`${options.server}/track`, {
+  return fetch(`http://${options.server}/track`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -36,6 +36,7 @@ export function track(name: string, args: any[] = []) {
 
 export async function subscribeToMockState(onUpdate: (state: any) => void) {
   socket.onmessage = function (event) {
+    console.log("Server sending state over wire: ", event);
     onUpdate(JSON.parse(event.data));
   };
 
